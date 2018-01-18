@@ -23,3 +23,49 @@ img, video {
 html {
 	font-size: 16px;
 }
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+	margin: 0 auto;
+}
+
+
+/******************************************
+/* GENERAL
+/*******************************************/
+
+.frame {
+	max-width: 782px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0;
+	border: 5px solid #000;
+}
+
+.row {
+	padding: 0;
+}
+
+.cell {
+	min-height: 50px;
+	border: 5px solid #000;
+	float: left;
+	padding: 0;
+}
+
+
+
+.colour-red {
+	background-color: red;
+}
+
+.colour-blue {
+	background-color: blue;
+}
+
+.colour-yellow {
+	background-color: yellow;
+}
