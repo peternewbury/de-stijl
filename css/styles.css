@@ -25,24 +25,17 @@ html {
 }
 
 /******************************************
-/* LAYOUT
-/*******************************************/
-.container {
-	margin: 0 auto;
-}
-
-
-/******************************************
 /* GENERAL
 /*******************************************/
 
 .frame {
 	max-width: 782px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	padding: 0;
 	border: 5px solid #000;
+	margin: 0 auto;
 }
 
 .row {
@@ -54,8 +47,27 @@ html {
 	border: 5px solid #000;
 	float: left;
 	padding: 0;
+	width: 50px;
 }
 
+.cell:hover {
+	cursor: pointer;
+}
+
+/*DELETE*/
+.left-col .cell, .right-col .cell {
+	height: 50px;
+}
+
+.left-col .row-3 .cell {
+	height: 100px;
+}
+
+.right-col .row-1 .cell {
+	height: 100px;
+}
+
+/*^^^DELETE^^^*/
 
 
 .colour-red {
