@@ -29,25 +29,31 @@ html {
 /*******************************************/
 
 .frame {
-	max-width: 782px;
+	width: 90%;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	align-items: center;
 	padding: 0;
 	border: 5px solid #000;
 	margin: 0 auto;
 }
 
+.middle-col {
+	height: 500px;
+}
+
+.right-col, .left-col {
+		display: none;
+	}
+
 .row {
 	padding: 0;
 }
 
 .cell {
-	min-height: 50px;
 	border: 5px solid #000;
-	float: left;
 	padding: 0;
-	width: 50px;
 }
 
 .cell:hover {
@@ -55,7 +61,7 @@ html {
 }
 
 /*DELETE*/
-.left-col .cell, .right-col .cell {
+/*.left-col .cell, .right-col .cell {
 	height: 50px;
 }
 
@@ -65,9 +71,94 @@ html {
 
 .right-col .row-1 .cell {
 	height: 100px;
-}
+}*/
 
 /*^^^DELETE^^^*/
+
+
+/******************************************
+/* ROWS
+/*******************************************/
+
+.middle-col {
+	width: 100%;
+}
+
+
+
+/******************************************
+/* CELLS
+/*******************************************/
+
+/*MIDDLE COL - ROW HEIGHTS*/
+.middle-col .row-1 .cell {
+	height: 30px;
+}
+.middle-col .row-2 .cell {
+	height: 32.5px;
+}
+.middle-col .row-3 .cell {
+	height: 18.75px;
+}
+.middle-col .row-4 .cell {
+	height: 18.75px;
+}
+
+/*MIDDLE COL - ROW 1*/
+#r1c1 {
+	width: 15%;
+}
+#r1c2 {
+	width: 35%;
+}
+#r1c3 {
+	width: 38%;
+}
+#r1c4 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 2*/
+#r2c1 {
+	width: 15%;
+}
+#r2c2 {
+	width: 35%;
+}
+#r2c3 {
+	width: 13%;
+}
+#r2c4 {
+	width:25%;
+}
+#r2c5 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 3*/
+#r3c1 {
+	width: 15%;
+}
+#r3c2 {
+	width: 48%;
+}
+#r3c3 {
+	width: 25%;
+}
+#r3c4 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 4*/
+#r4c1 {
+	width: 15%;
+}
+#r4c2 {
+	width: 48%;
+}
+#r4c3 {
+	width: 37%;
+}
 
 
 .colour-red {
@@ -80,4 +171,37 @@ html {
 
 .colour-yellow {
 	background-color: yellow;
+}
+
+
+ 
+
+@media (min-width: 768px) {
+
+
+	/******************************************
+	/* GENERAL
+	/*******************************************/
+
+	.frame {
+		width: auto;
+		max-width: 768px;
+	}
+
+	.right-col, .left-col {
+		display: block;
+	}
+
+	.left-col {
+	width: 5%
+	}
+
+	.middle-col {
+		width: 85%;
+	}
+
+	.right-col {
+		width: 10%;
+	}
+
 }
