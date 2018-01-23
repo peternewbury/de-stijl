@@ -33,10 +33,14 @@ body {
 /* GENERAL
 /*******************************************/
 
+body {
+	background-color: #000;
+}
+
 .frame {
 	width: 100%;
 	min-width: 320px;
-	height: 500px;
+	height: 100vh;
 	display: flex;
 	/*flex-direction: row;*/
 	/*flex-wrap: nowrap;*/
@@ -74,6 +78,7 @@ body {
 .cell {
 	border: 5px solid #000;
 	padding: 0;
+	background-color: #fff;
 }
 
 .cell:hover {
@@ -212,17 +217,7 @@ body {
 }
  
 
-@media (min-width: 768px) {
-
-
-	/******************************************
-	/* GENERAL
-	/*******************************************/
-
-	.frame {
-		width: auto;
-		max-width: 768px;
-	}
+@media (min-width: 700px) {
 
 	.col-right, .col-left {
 		display: block;
@@ -235,4 +230,19 @@ body {
 	.col-middle {
 		width: 85%;
 	}
+}
+
+@media (min-width: 1200px) {
+
+	body {
+		background-color: green;
+	}
+
+	.frame {
+		width: auto;
+		height: 500px;
+		max-width: 768px;
+		margin-top: 90px;
+	}
+
 }
