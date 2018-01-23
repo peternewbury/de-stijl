@@ -30,25 +30,38 @@ html {
 
 .frame {
 	width: 90%;
+	height: 500px;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: center;
+	/*flex-direction: row;*/
+	/*flex-wrap: nowrap;*/
 	padding: 0;
 	border: 5px solid #000;
 	margin: 0 auto;
 }
 
-.middle-col {
-	height: 500px;
+.col-middle {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
-.right-col, .left-col {
-		display: none;
-	}
+.col-left {
+	display: flex;
+	flex-direction: column;
+}
+
+.col-right {
+	display: flex;
+	flex-direction: column;
+}
+
+.col-left, .col-right {
+	display: none;
+}
 
 .row {
 	padding: 0;
+	display: flex;
 }
 
 .cell {
@@ -59,107 +72,6 @@ html {
 .cell:hover {
 	cursor: pointer;
 }
-
-/*DELETE*/
-/*.left-col .cell, .right-col .cell {
-	height: 50px;
-}
-
-.left-col .row-3 .cell {
-	height: 100px;
-}
-
-.right-col .row-1 .cell {
-	height: 100px;
-}*/
-
-/*^^^DELETE^^^*/
-
-
-/******************************************
-/* ROWS
-/*******************************************/
-
-.middle-col {
-	width: 100%;
-}
-
-
-
-/******************************************
-/* CELLS
-/*******************************************/
-
-/*MIDDLE COL - ROW HEIGHTS*/
-.middle-col .row-1 .cell {
-	height: 30px;
-}
-.middle-col .row-2 .cell {
-	height: 32.5px;
-}
-.middle-col .row-3 .cell {
-	height: 18.75px;
-}
-.middle-col .row-4 .cell {
-	height: 18.75px;
-}
-
-/*MIDDLE COL - ROW 1*/
-#r1c1 {
-	width: 15%;
-}
-#r1c2 {
-	width: 35%;
-}
-#r1c3 {
-	width: 38%;
-}
-#r1c4 {
-	width: 12%;
-}
-
-/*MIDDLE COL - ROW 2*/
-#r2c1 {
-	width: 15%;
-}
-#r2c2 {
-	width: 35%;
-}
-#r2c3 {
-	width: 13%;
-}
-#r2c4 {
-	width:25%;
-}
-#r2c5 {
-	width: 12%;
-}
-
-/*MIDDLE COL - ROW 3*/
-#r3c1 {
-	width: 15%;
-}
-#r3c2 {
-	width: 48%;
-}
-#r3c3 {
-	width: 25%;
-}
-#r3c4 {
-	width: 12%;
-}
-
-/*MIDDLE COL - ROW 4*/
-#r4c1 {
-	width: 15%;
-}
-#r4c2 {
-	width: 48%;
-}
-#r4c3 {
-	width: 37%;
-}
-
 
 .colour-red {
 	background-color: red;
@@ -174,6 +86,123 @@ html {
 }
 
 
+/******************************************
+/* CELLS
+/*******************************************/
+
+/*LEFT COL*/
+#lc1 {
+	height: 30%;
+}
+
+#lc2 {
+	height: 32.5%;
+}
+
+#lc3 {
+	height: 37.5%;
+}
+
+/*MIDDLE COL - ROW HEIGHTS*/
+.col-middle .row-1 {
+	height: 30%;
+	/*flex: 30;*/
+}
+
+.col-middle .row-2 {
+	height: 32.5%;
+}
+
+.col-middle .row-3 {
+	/*height: 18.75px;*/
+	height: 18.75%;
+}
+
+.col-middle .row-4 {
+	/*height: 18.75px;*/
+	height: 18.75%;
+}
+
+/*MIDDLE COL - ROW 1*/
+#mr1c1 {
+	width: 15%;
+}
+
+#mr1c2 {
+	width: 35%;
+}
+
+#mr1c3 {
+	width: 38%;
+}
+
+#mr1c4 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 2*/
+#mr2c1 {
+	width: 15%;
+}
+
+#mr2c2 {
+	width: 35%;
+}
+
+#mr2c3 {
+	width: 13%;
+}
+
+#mr2c4 {
+	width:25%;
+}
+
+#mr2c5 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 3*/
+#mr3c1 {
+	width: 15%;
+}
+
+#mr3c2 {
+	width: 48%;
+}
+
+#mr3c3 {
+	width: 25%;
+}
+
+#mr3c4 {
+	width: 12%;
+}
+
+/*MIDDLE COL - ROW 4*/
+#mr4c1 {
+	width: 15%;
+}
+
+#mr4c2 {
+	width: 48%;
+}
+
+#mr4c3 {
+	width: 37%;
+}
+
+/*RIGHT COL*/
+#rc1 {
+	height: 30%;
+}
+
+#rc2 {
+	height: 51.25%;
+}
+
+#rc3 {
+	height: 18.75%;
+}
  
 
 @media (min-width: 768px) {
@@ -188,20 +217,15 @@ html {
 		max-width: 768px;
 	}
 
-	.right-col, .left-col {
+	.col-right, .col-left {
 		display: block;
 	}
 
-	.left-col {
-	width: 5%
+	.col-left, .col-right {
+	width: 8%
 	}
 
-	.middle-col {
+	.col-middle {
 		width: 85%;
 	}
-
-	.right-col {
-		width: 10%;
-	}
-
 }
