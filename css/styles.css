@@ -42,8 +42,6 @@ body {
 	min-width: 320px;
 	height: 100vh;
 	display: flex;
-	/*flex-direction: row;*/
-	/*flex-wrap: nowrap;*/
 	padding: 0;
 	border: 5px solid #000;
 	margin: 0 auto;
@@ -118,7 +116,6 @@ body {
 /*MIDDLE COL - ROW HEIGHTS*/
 .col-middle .row-1 {
 	height: 30%;
-	/*flex: 30;*/
 }
 
 .col-middle .row-2 {
@@ -126,12 +123,10 @@ body {
 }
 
 .col-middle .row-3 {
-	/*height: 18.75px;*/
 	height: 18.75%;
 }
 
 .col-middle .row-4 {
-	/*height: 18.75px;*/
 	height: 18.75%;
 }
 
@@ -240,9 +235,9 @@ body {
 
 	.frame {
 		width: auto;
-		height: 500px;
-		max-width: 768px;
-		margin-top: 90px;
+		max-height: 800px;
+		max-width: 1200px;
+		/*margin-top: 90px;*/
 	}
 
 }
