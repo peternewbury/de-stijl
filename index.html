@@ -8,22 +8,34 @@
 
 		<link rel="icon" href="./images/favicon.ico">
 
-		<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+
+		<link rel="stylesheet" type="text/css" href="./css/magnific-popup.css">
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	</head>
 	<body>
 		<div class="frame">
 			<div class="col-left">
 				<div id="lc1" class="cell"></div>
-				<div id="lc2" class="cell"></div>
+				<div href="#quote-2" id="lc2" class="cell text"></div>
+				<div id="quote-2" class="text-popup mfp-hide">
+						<p>
+							Until now, man has let himself be lulled to sleep by pathetic lyric. That is why it is so fatal for the evolution of man, for all his activities, his necessary fight for equilibrium. On the other hand it has overfilled man with tragedy: tragedy has been so overrated that people have had enough. And already this is visible, man tries to ban it from all forms of art. Thus art achieves its goal at last; it takes evolution to balance.</p>
+						<p>&ndash; <strong>Piet Mondrian</strong></p>
+					</div>
 				<div id="lc3" class="cell"></div>
 			</div>
 
 			<div class="col-middle">
 				<div class="row row-1">
-					<a id="mr1c1" class="cell colour colour-yellow" href="https://en.wikipedia.org/wiki/De_Stijl" target="_blank"></a>
+					<a id="mr1c1" class="link cell colour colour-yellow" href="https://en.wikipedia.org/wiki/De_Stijl" target="_blank">
+						<div class="hidden">
+							<p>wikipedia <i class="fa fa-external-link"></i></p>
+						</div>
+					</a>
 					<div id="mr1c2" class="cell colour colour-red"></div>
-					<div id="mr1c3" class="cell colour colour-blue"></div>
+					<a id="mr1c3" data-mfp-src="https://www.youtube.com/watch?v=UOSvUfbPHpY&autoplay=1" href="https://www.youtube.com/watch?v=UOSvUfbPHpY&autoplay=1" class="mfp-iframe cell colour colour-blue"></a>
 					<div id="mr1c4" class="cell colour colour-yellow"></div>
 				</div>
 				<div class="row row-2">
@@ -36,13 +48,23 @@
 				<div class="row row-3">
 					<div id="mr3c1" class="cell"></div>
 					<div id="mr3c2" class="cell colour colour-blue"></div>
-					<a id="mr3c3" class="cell" href="http://www.tate.org.uk/art/art-terms/d/de-stijl" target="blank"></a>
+					<a id="mr3c3" class="cell link" href="http://www.tate.org.uk/art/art-terms/d/de-stijl" target="blank">
+						<div class="hidden">
+							<p>Tate galleries <i class="fa fa-external-link"></i></p>
+						</div>
+					</a>
 					<div id="mr3c4" class="cell colour colour-yellow"></div>
 				</div>
 				<div class="row row-4">
 					<div id="mr4c1" class="cell colour colour-red"></div>
 					<div id="mr4c2" class="cell colour colour-yellow"></div>
-					<div id="mr4c3" class="cell"></div>
+					<div href="#quote-1" id="mr4c3" class="cell text"></div>
+					<div id="quote-1" class="text-popup mfp-hide">
+							<p>
+								Everything is expressed through relationship. Colour can exist only through other colours, dimension through other dimensions, position through other positions that oppose them. That is why I regard relationship as the principal thing.
+							</p>
+							<p>&ndash; <strong>Piet Mondrian</strong></p>
+						</div>
 				</div>
 			</div>
 
@@ -54,7 +76,8 @@
 		</div>
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="./js/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 		<script type="text/javascript" src="./js/index.js"></script>
 	</body>
 </html>
+
