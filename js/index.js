@@ -20,17 +20,10 @@ $(document).ready(function() {
 		$('.cell').addClass('colour').addClass(changeColour);
 	});
 
-	// on click popup image slideshow of design images
-	// $('#mr1c3').on('click', function() {
-	// 	$.magnificPopup.open({
-	// 	  items: {
-	// 	    src: 'https://www.youtube.com/watch?v=UOSvUfbPHpY&autoplay=1'
-	// 		  },
-	// 		  type: 'video'
-	// 		});
-	// });
-
-	$('#mr1c3').magnificPopup();
+	// popup for images, videos and inline
+	$('.popup').magnificPopup({
+		midClick: true
+	});
 
 
 	// on hover show link
@@ -41,13 +34,6 @@ $(document).ready(function() {
 		// mouse out remove grey background and hide
 		function() {$(this).removeClass('colour-grey').children().addClass('hidden');}
 	);
-
-
-	// pop-up quote on click
-	$('.text').magnificPopup({
-	  type:'inline',
-	  midClick: true 
-	});
 
 
 });
