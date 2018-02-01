@@ -1,13 +1,3 @@
-/*@keyframes colour-fade-in {
-	from {
-		transform: translateY(0);
-	}
-	to {
-		transform: translateY(-110%);
-	}
-}*/
-
-
 /*******************
   BASE SETUP
 *******************/
@@ -48,6 +38,10 @@ body {
 a {
 	text-decoration: none;
 	color: #fff;
+}
+
+p {
+	padding: 5px;
 }
 
 .frame {
@@ -194,6 +188,13 @@ a {
 	width: 35%;
 }
 
+#mr2c2:hover {
+	background-color: grey;
+	background-image: url('../images/piet-mondrian.jpg');
+	background-repeat: no-repeat;
+	background-size: 105%;
+}
+
 #mr2c3 {
 	width: 13%;
 }
@@ -262,25 +263,6 @@ a {
   margin: 20px auto;
 }
 
-
-/*TEST*/
-
-/*div .colour:before {
-	content: '';
-	background-color: #fff;
-	width: 100%;
-	height: 100%;
-	transform: translateY(-110%);
-	position: absolute;
-	animation-name: colour-fade-in;
-	animation-duration: .7s;
-	animation-fill-mode: forwards;
-	animation-timing-function: ease-in;
-}*/
-
-
-/*^^TEST^^*/
-
 @media (min-width: 700px) {
 
 	.col-right, .col-left {
@@ -306,7 +288,6 @@ a {
 		width: auto;
 		max-height: 800px;
 		max-width: 1200px;
-		/*margin-top: 90px;*/
 	}
 
 }
