@@ -26,14 +26,14 @@ $(document).ready(function() {
     });
 
     // define function for hidding mr2c1h and displaying mr2c1
-    function showCells() {
+    function showVerticalCells() {
       $(this).parent().attr("style", "");
       $('#mr2c1').removeClass('hide');
     }
 
     // on click call some function
-    $('#mr2c1h1').on('click', showCells);
-    $('#mr2c1h2').on('click', showCells);
+    $('#mr2c1h1').on('click', showVerticalCells);
+    $('#mr2c1h2').on('click', showVerticalCells);
   
 	// on click all items with class of cell get assigned color randomly
 	$('#mr3c2').on('click', function() {
@@ -44,7 +44,7 @@ $(document).ready(function() {
 		}
 
 		// remove any existing colour classes
-		$('.cell').removeClass('colour-red colour-blue colour-yellow colour-white');
+		$('.cell').removeClass('colour-red colour-blue colour-yellow colour-red-retro colour-blue-retro colour-yellow-retro colour-white');
 
 		// toogle random class from changeColour
 		$('.cell').addClass('colour').addClass(changeColour);
@@ -139,6 +139,13 @@ $(document).ready(function() {
   // have #mr2c2 hover image replaced on mobile with click
   $('#mr2c2').on('click', function() {
     $(this).toggleClass('image-click');
+  });
+
+  // on click change all colour classes to retros
+  $('#rc1').on('click', function() {
+    $('body').find('.colour-yellow').removeClass('colour-yellow').addClass('colour-yellow-retro');
+    $('body').find('.colour-blue').removeClass('colour-blue').addClass('colour-blue-retro');
+    $('body').find('.colour-red').removeClass('colour-red').addClass('colour-red-retro');
   });
 
 });

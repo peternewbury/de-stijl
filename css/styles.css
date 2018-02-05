@@ -93,6 +93,18 @@ p {
 	background-color: #ff0;
 }
 
+.colour-red-retro {
+	background-color: #AB3A30;
+}
+
+.colour-blue-retro {
+	background-color: #626D80;
+}
+
+.colour-yellow-retro {
+	background-color: #BFAD69;
+}
+
 .colour-white {
 	background-color: #fff;
 }
@@ -308,7 +320,7 @@ p {
 @media (min-width: 1200px) {
 
 	body {
-		background-color: green;
+		background-color: #DECEC1;
 	}
 
 	.frame {
