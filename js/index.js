@@ -43,6 +43,9 @@ $(document).ready(function() {
 		   return colours[Math.floor(Math.random() * colours.length)];
 		}
 
+    // remove retro class from rc1
+    $('#rc1').removeClass('retro');
+
 		// remove any existing colour classes
 		$('.cell').removeClass('colour-red colour-blue colour-yellow colour-red-retro colour-blue-retro colour-yellow-retro colour-white');
 
@@ -143,9 +146,21 @@ $(document).ready(function() {
 
   // on click change all colour classes to retros
   $('#rc1').on('click', function() {
-    $('body').find('.colour-yellow').removeClass('colour-yellow').addClass('colour-yellow-retro');
-    $('body').find('.colour-blue').removeClass('colour-blue').addClass('colour-blue-retro');
-    $('body').find('.colour-red').removeClass('colour-red').addClass('colour-red-retro');
+    // check to see if already has retro colours, if so, remove
+    if ($(this).hasClass('retro')) {
+      $('body').find('.colour-yellow-retro').removeClass('colour-yellow-retro').addClass('colour-yellow');
+      $('body').find('.colour-blue-retro').removeClass('colour-blue-retro').addClass('colour-blue');
+      $('body').find('.colour-red-retro').removeClass('colour-red-retro').addClass('colour-red');
+      $(this).removeClass('retro');
+    }
+
+    // remove normal colour classes and add retro ones
+    else {
+      $(this).addClass('retro');
+      $('body').find('.colour-yellow').removeClass('colour-yellow').addClass('colour-yellow-retro');
+      $('body').find('.colour-blue').removeClass('colour-blue').addClass('colour-blue-retro');
+      $('body').find('.colour-red').removeClass('colour-red').addClass('colour-red-retro');
+    }
   });
 
 });
