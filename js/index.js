@@ -7,16 +7,16 @@ $(document).ready(function() {
 
   // show hidden cells on click
     // create function for toggling hide
-    function magic() {
+    function showCells() {
       $('#mr4c2').toggleClass('hide');
       $('#mr4c2h1').toggleClass('hide');
       $('#mr4c2h2').toggleClass('hide');
     }
 
     // call functions on each tile
-    $('#mr4c2').on('click', magic);
-    $('#mr4c2h1').on('click', magic);
-    $('#mr4c2h2').on('click', magic);
+    $('#mr4c2').on('click', showCells);
+    $('#mr4c2h1').on('click', showCells);
+    $('#mr4c2h2').on('click', showCells);
 
   // show hidden cells on click
     // hide this and change display to flex for mr2c1h
@@ -26,14 +26,14 @@ $(document).ready(function() {
     });
 
     // define function for hidding mr2c1h and displaying mr2c1
-    function some() {
+    function showCells() {
       $(this).parent().attr("style", "");
       $('#mr2c1').removeClass('hide');
     }
 
     // on click call some function
-    $('#mr2c1h1').on('click', some);
-    $('#mr2c1h2').on('click', some);
+    $('#mr2c1h1').on('click', showCells);
+    $('#mr2c1h2').on('click', showCells);
   
 	// on click all items with class of cell get assigned color randomly
 	$('#mr3c2').on('click', function() {
@@ -43,7 +43,7 @@ $(document).ready(function() {
 		   return colours[Math.floor(Math.random() * colours.length)];
 		}
 
-		// remove any existing colour classes, 
+		// remove any existing colour classes
 		$('.cell').removeClass('colour-red colour-blue colour-yellow colour-white');
 
 		// toogle random class from changeColour
@@ -138,12 +138,7 @@ $(document).ready(function() {
 
   // have #mr2c2 hover image replaced on mobile with click
   $('#mr2c2').on('click', function() {
-    $(this).toggleClass('mobile-hover');
-  });
-
-  // remove mobile-hover if window resized
-  $(window).on('resize', function(event) {
-    $('#mr2c2').removeClass('mobile-hover');
+    $(this).toggleClass('image-click');
   });
 
 });

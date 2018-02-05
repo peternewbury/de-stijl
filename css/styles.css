@@ -21,8 +21,8 @@ img, video {
 }
 
 html {
-	font-size: 16px;
 	font-family: 'Roboto Mono', monospace;
+	font-size: 16px;
 }
 
 /******************************************
@@ -30,14 +30,14 @@ html {
 /*******************************************/
 
 body {
-	padding: 0;
-	margin: 0;
 	background-color: #000;
+	margin: 0;
+	padding: 0;
 }
 
 a {
-	text-decoration: none;
 	color: #fff;
+	text-decoration: none;
 }
 
 p {
@@ -45,30 +45,19 @@ p {
 }
 
 .frame {
+	border: 7.5px solid #000;
+	display: flex;
+	height: 100vh;
+	margin: 0 auto;
+	padding: 0;
 	width: 100%;
 	min-width: 320px;
-	height: 100vh;
-	display: flex;
-	padding: 0;
-	border: 7.5px solid #000;
-	margin: 0 auto;
 }
 
 .col-middle {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.col-left {
-	display: flex;
-	flex-direction: column;
-}
-
-.col-right {
-	display: flex;
-	flex-direction: column;
 }
 
 .col-left, .col-right {
@@ -76,16 +65,16 @@ p {
 }
 
 .row {
-	padding: 0;
 	display: flex;
+	padding: 0;
 }
 
 .cell {
-	border: 7.5px solid #000;
-	padding: 0;
 	background-color: #fff;
-	position: relative;
+	border: 7.5px solid #000;
 	overflow: hidden;
+	padding: 0;
+	position: relative;
 }
 
 .cell:hover {
@@ -93,15 +82,15 @@ p {
 }
 
 .colour-red {
-	background-color: red;
+	background-color: #f00;
 }
 
 .colour-blue {
-	background-color: blue;
+	background-color: #00f;
 }
 
 .colour-yellow {
-	background-color: yellow;
+	background-color: #ff0;
 }
 
 .colour-white {
@@ -109,7 +98,7 @@ p {
 }
 
 .colour-grey {
-	background-color: grey;
+	background-color: #808080;
 }
 
 .hidden {
@@ -125,18 +114,18 @@ p {
 }
 
 .link div {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
 	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	width: 100%;
 }
 
-.mobile-hover {
+.image-click {
 	background-color: grey;
 	background-image: url('../images/piet-mondrian_m.jpg');
 	background-repeat: no-repeat;
-	background-size: 110%;
+	background-size: 100% 100%;
 	cursor: default;
 }
 
@@ -197,23 +186,21 @@ p {
 }
 
 #mr2c1h {
-	width: 15%;
 	display: none;
 	flex-direction: column;
+	width: 15%;
 }
 
 #mr2c1h1 {
-	width: 100%;
-	height: 50%;
 	border: none;
 	border-bottom: 10px solid #000;
+	height: 50%;
 }
 
 #mr2c1h2 {
-	width: 100%;
-	height: 50%;
 	border: none;
 	border-top: 10px solid #000;
+	height: 50%;
 }
 
 #mr2c2 {
@@ -288,12 +275,12 @@ p {
 /*******************************************/
 
 .popup-text {
-  position: relative;
   background: #FFF;
-  padding: 20px;
-  width: auto;
-  max-width: 500px;
   margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  width: auto;
 }
 
 /******************************************
@@ -302,24 +289,14 @@ p {
 
 @media (min-width: 700px) {
 
-	.col-right, .col-left {
-		display: block;
-	}
-
 	.col-left, .col-right {
-	width: 8%
+		display: flex;
+		flex-direction: column;
+		width: 8%;
 	}
 
 	.col-middle {
 		width: 85%;
-	}
-
-	#mr2c2:hover {
-		background-color: grey;
-		background-image: url('../images/piet-mondrian_m.jpg');
-		background-repeat: no-repeat;
-		background-size: 110%;
-		cursor: default;
 	}
 
 }
@@ -335,9 +312,9 @@ p {
 	}
 
 	.frame {
-		width: auto;
 		max-height: 800px;
 		max-width: 1200px;
+		width: auto;
 	}
 
 }
