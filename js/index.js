@@ -55,7 +55,9 @@ $(document).ready(function() {
 
 	// popup for videos and inline
 	$('.popup').magnificPopup({
-		midClick: true
+		midClick: true,
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
 	});  
 
 	// image slideshow of fashion/bulidings etc
@@ -139,7 +141,7 @@ $(document).ready(function() {
     function() {$(this).removeClass('colour-grey').children().addClass('hidden');},
   );
 
-  // have #mr2c2 hover image replaced on mobile with click
+  // #mr2c2 display image on click
   $('#mr2c2').on('click', function() {
     $(this).toggleClass('image-click');
   });
